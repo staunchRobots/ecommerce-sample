@@ -34,3 +34,5 @@ group :test do
   gem 'launchy'
 end
 
+#deployment
+gem 'heroku'
