@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ecommerceapp_development
+  username: jose
+  password: perrofrito
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: ecommerceapp_test
+  username: jose
+  password: perrofrito
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: ecommerceapp_production
+  username: jose
+  password: perrofrito

@@ -1,0 +1,11 @@
+#products-container
+  - 15.times do
+    %ul.featured-product
+      %li
+        = link_to(image_tag("bubble-purple_medium.jpg", width: 170), nil)      
+        %span.product-name
+          Purple Bubble Chair
+        %span.featured-price
+          %strong $195.00
+        %br
+        %span{ class: "small button details" } DETAILS

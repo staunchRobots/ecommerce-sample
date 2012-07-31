@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title e-commerce app
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    #wrap
+      #header-wrapper
+        #header.clearfix
+          #logo       
+            %h1
+              = link_to "jestrella", root_path          
+          #toolbar      
+            %ul.toolbar-checkout
+              %li
+                = link_to "Check Out", nil, class: "large button secondary"
+            %ul.toolbar-cart
+              %li
+                Cart: 
+                %span.toolbar-cart-count
+                  %a{ href: "/cart" } 0 items
+              %li                
+          #main-navigation
+            %ul        
+              %li.current
+                = link_to "Home", root_path
+              %li
+                = link_to "Catalog", nil
+              %li
+                = link_to "Blog", nil
+              %li
+                = link_to "About Us", nil
+
+        %div{ style: "clear: both" }
+
+      #home-banner-wrapper
+        #home-banner
+          #home-banner-content
+            %h2.title Jose Estrella Industries Shop
+            %p This is the best Place to find Top Notch Furniture and more.
+            = link_to "View our Catalog", nil, class: "large button main"
+          #home-banner-image
+            = image_tag "home-banner-img.png"
+
+      #content-wrapper
+        #featured-products
+          #search
+            = form_tag "/search" do
+              = text_field_tag :q, nil, class: "search-field"
+              = link_to(image_tag("btn-search.png", class: "search-button"), "/search")
+          %h3.featured-products-title Featured Products:
+
+          = yield
+    
+    #footer
+      #footer-content
+
+        %div{ class: "copyright clearfix" }
+          %p
+            = link_to "Search", nil
+            %span{ style: "color: gray padding: 0 px" } 
+            |
+            = link_to "About Us", nil
+            %span{ style: "color: gray padding: 0 px" } 
+            | Copyright © 2012 Monochrome.
+        
+
+        %ul.credit-cards      
+          %li
+            = image_tag "icon-visa.png"
+          %li
+            = image_tag "icon-paypal.png"
+          %li
+            = image_tag "icon-discover.png"
+          %li
+            = image_tag "icon-mastercard.png"
+          %li
+            = image_tag "icon-ae.png"
+     
+          
+
