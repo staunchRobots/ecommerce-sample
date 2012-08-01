@@ -7,12 +7,19 @@
     = csrf_meta_tags
 
   %body
+    = render "shared/users_bar"
+   
     #wrap
+      - if notice
+        %p.notice= notice
+      - if alert
+        %p.alert= alert
+
       #header-wrapper
         #header.clearfix
           #logo       
             %h1
-              = link_to "jestrella", root_path          
+              = link_to "jestrella", home_url
           #toolbar      
             %ul.toolbar-checkout
               %li
@@ -26,7 +33,7 @@
           #main-navigation
             %ul        
               %li.current
-                = link_to "Home", root_path
+                = link_to "Home", home_url
               %li
                 = link_to "Catalog", nil
               %li
@@ -35,15 +42,8 @@
                 = link_to "About Us", nil
 
         %div{ style: "clear: both" }
-
-      #home-banner-wrapper
-        #home-banner
-          #home-banner-content
-            %h2.title Jose Estrella Industries Shop
-            %p This is the best Place to find Top Notch Furniture and more.
-            = link_to "View our Catalog", nil, class: "large button main"
-          #home-banner-image
-            = image_tag "home-banner-img.png"
+              
+      = render 'shared/home_banner' 
 
       #content-wrapper
         #featured-products

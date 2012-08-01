@@ -24,6 +24,9 @@ gem 'jquery-rails'
 #authentication
 gem 'devise'
 
+#authorization
+gem 'cancan'
+
 #Testing
 
 group :test do

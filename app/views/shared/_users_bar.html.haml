@@ -1,0 +1,11 @@
+#users-bar
+  #user-commands
+    - if user_signed_in?
+      Logged in as
+      %strong= current_user.email
+      = link_to "Edit Profile", edit_user_registration_path, class: "separate"
+      = link_to "Log Out", destroy_user_session_path, class: "separate", method: :delete
+      = link_to "Admin Site", admin_path, class: "separate"
+    - else
+      = link_to "Log In", new_user_session_path, class: "user-link"
+      = link_to "Sign Up", new_user_registration_path, class: "user-link"
