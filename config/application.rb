@@ -75,5 +75,7 @@ module Ecommerceapp
       g.template_engine :haml
     end
 
+    config.assets.precompile += ['stylesheet.css', 'admin.css', 'bootstrap_and_overrides.css', 'products.css'] 
+
   end
 end
