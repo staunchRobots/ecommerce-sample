@@ -1,0 +1,11 @@
+= simple_form_for @product, class: "form-horizontal" do |f|
+  = f.input :name
+  = f.input :description, input_html: { rows: 4 }
+  = f.label :on_sale
+  = f.collection_radio_buttons :on_sale, [ [true, 'Yes'], [false, 'No'] ], :first, :last,
+  input_html: { display: "block" }
+  %br
+  %br
+  = f.input :price
+  = f.input :qty
+  = f.submit

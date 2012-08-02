@@ -3,12 +3,19 @@
   %head
     %title e-commerce Admin Site
     = stylesheet_link_tag "application", media: "all"
-    = stylesheet_link_tag "admin", media: "all"
     = stylesheet_link_tag "bootstrap_and_overrides", media: "all"
-
+    = stylesheet_link_tag "stylesheet", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
 
   %body
-    #content.hero-unit
-      = yield
+    = render "shared/users_bar"
+
+    - if notice
+      %p.notice= notice
+    - if alert
+      %p.alert= alert
+ 
+    #forms-content
+      #one-form
+        = yield

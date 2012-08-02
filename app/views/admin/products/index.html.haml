@@ -1,0 +1,20 @@
+.titles
+  %h2 Available Products
+
+- @products.each do |product|
+
+  .single-product
+    %ul.thumbnails
+      %li.span3
+        .thumbnail
+          = image_tag("no-image.jpg", alt: "product")
+          .caption
+            %h4= product.name
+            %br
+            %p
+              = link_to "Details", product_path(product), class: "btn btn-primary"
+              = link_to product_path(product), class: "btn btn-danger", method: :delete do
+                %i{ class: "icon-trash icon-white" }
+                Delete
+.controls_
+  = link_to "Add Product", new_product_path, class: "btn btn-info"

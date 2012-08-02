@@ -1,12 +1,12 @@
 #products-container
-  - 5.times do
+  - @products.each do |product|
+    -#this will be moved to a presenter soon :)
     %ul.featured-product
       %li
-        = link_to(image_tag("bubble-purple_medium.jpg", width: 170), nil)      
-        %span.product-name
-          Purple Bubble Chair
+        = link_to(image_tag("no-image.jpg", width: 170), nil)      
+        %span.product-name= product.name
         %span.featured-price
-          %strong $195.00
+          %strong= number_to_currency(product.price)
         %br
         %span{ class: "small button details" } DETAILS
 

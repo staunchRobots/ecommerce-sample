@@ -28,7 +28,6 @@ gem 'devise'
 gem 'cancan'
 
 #Testing
-
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
@@ -39,3 +38,6 @@ end
 
 #deployment
 gem 'heroku'
+
+#forms
+gem 'simple_form'
