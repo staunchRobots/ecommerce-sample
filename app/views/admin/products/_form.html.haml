@@ -2,10 +2,12 @@
   = f.input :name
   = f.input :description, input_html: { rows: 4 }
   = f.label :on_sale
-  = f.collection_radio_buttons :on_sale, [ [true, 'Yes'], [false, 'No'] ], :first, :last,
-  input_html: { display: "block" }
+  = f.check_box :on_sale
   %br
   %br
   = f.input :price
   = f.input :qty
-  = f.submit
+
+  .many_buttons
+    = f.submit class: "btn btn-primary"
+    = link_to "Cancel", products_path, class: "btn btn-warning"

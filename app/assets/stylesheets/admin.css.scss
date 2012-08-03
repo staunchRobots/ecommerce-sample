@@ -4,22 +4,42 @@ body {
 }
 
 #content {
+  position: relative;
   width: 815px;
-  margin: 20px auto;
+  top: 55px;
   padding: 8px;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .single-product {
   float: left;
+  .thumbnails .span3 .thumbnail {
+    min-height: 250px;
+  }
+}
+
+.one-product {
+  padding: 20px;
 }
 
 .caption {
   text-align: center;
 }
 
-.controls_, .titles {
+.titles {
   text-align: center;
+}
+
+.controls_ {
+  display: block;
+  clear: both;
+}
+
+.form-part {
+  float: left;
+  width: 49%;
 }
 
 form label {
@@ -28,3 +48,19 @@ form label {
   margin-left: 5px;
 }
 
+#twitter-notice {
+  position: absolute;
+  top: 4px;
+  width: 100%;
+  height: 48px;
+  z-index: 11;
+
+  p {
+    text-align: center;
+  }
+}
+
+.many_buttons input {
+  float: left;
+  margin-right: 15px;
+}

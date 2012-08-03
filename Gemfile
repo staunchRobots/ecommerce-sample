@@ -41,3 +41,8 @@ gem 'heroku'
 
 #forms
 gem 'simple_form'
+
+#image uploading
+gem 'carrierwave'
+gem 'rmagick'
+gem 'fog'

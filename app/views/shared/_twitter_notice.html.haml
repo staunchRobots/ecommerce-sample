@@ -1,0 +1,8 @@
+#twitter-notice
+  - flash.each do |name, msg|
+    - type = select_alert_type(name, msg)
+    %div{ class: "alert alert-#{type} fade in" }
+      %a{ class: "close", 'data-dismiss' => 'alert', href: nil }×
+      %a{ class: "close", href: nil }
+      %p 
+        %strong= msg

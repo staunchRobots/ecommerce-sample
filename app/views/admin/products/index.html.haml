@@ -1,5 +1,6 @@
 .titles
   %h2 Available Products
+%br
 
 - @products.each do |product|
 
@@ -7,7 +8,7 @@
     %ul.thumbnails
       %li.span3
         .thumbnail
-          = image_tag("no-image.jpg", alt: "product")
+          = picture_for(product)
           .caption
             %h4= product.name
             %br
@@ -16,5 +17,10 @@
               = link_to product_path(product), class: "btn btn-danger", method: :delete do
                 %i{ class: "icon-trash icon-white" }
                 Delete
+
 .controls_
-  = link_to "Add Product", new_product_path, class: "btn btn-info"
+  %form.form-horizontal
+    %fieldset
+      .form-actions
+        = link_to "Add Product", new_product_path, class: "btn btn-info"
+        = link_to "Cancel", admin_path, class: "btn btn-warning"

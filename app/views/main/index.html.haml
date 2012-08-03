@@ -3,7 +3,7 @@
     -#this will be moved to a presenter soon :)
     %ul.featured-product
       %li
-        = link_to(image_tag("no-image.jpg", width: 170), nil)      
+        = picture_for product
         %span.product-name= product.name
         %span.featured-price
           %strong= number_to_currency(product.price)

@@ -1,0 +1,11 @@
+= form_for @product, html: { multipart: true } do |f|
+  = f.label :picture
+  %br
+  = picture_for @product      
+  %br
+  = f.file_field :picture
+  %br
+  %br
+  .many_buttons
+    = f.submit "Update Product", class: "btn btn-primary"
+    = link_to "Cancel", products_path, class: "btn btn-warning"

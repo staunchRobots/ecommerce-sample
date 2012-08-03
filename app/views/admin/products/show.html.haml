@@ -1,1 +1,35 @@
-%h2= @product.name
+.one-product
+  %h2= @product.name
+  %h4 Description:
+  .well
+    %h6= @product.description
+
+  %h4 Details:
+
+  .well
+    %h5
+      Price:
+      %span
+        %strong= number_to_currency @product.price
+    %h5
+      On Sale:
+      %span
+        %strong= @product.on_sale_text
+    %h5
+      In Stock:
+      %span
+        %strong= @product.qty
+
+  %h4 Picture:  
+  .well
+    = picture_for @product    
+
+.controls_
+  %form.form-horizontal
+    %fieldset
+      .form-actions
+        = link_to "Edit Product", edit_product_path(@product), class: "btn btn-inverse"
+        = link_to "Cancel", products_path, class: "btn btn-warning"
+ 
+
+
