@@ -14,7 +14,7 @@
             %br
             %p
               = link_to "Details", product_path(product), class: "btn btn-primary"
-              = link_to product_path(product), class: "btn btn-danger", method: :delete do
+              = link_to product_path(product), class: "btn btn-danger", method: :delete, confirm: "Are you sure?" do
                 %i{ class: "icon-trash icon-white" }
                 Delete
 

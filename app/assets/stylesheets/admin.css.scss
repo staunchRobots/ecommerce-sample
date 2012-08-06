@@ -60,7 +60,14 @@ form label {
   }
 }
 
-.many_buttons input {
-  float: left;
-  margin-right: 15px;
+.many_buttons {
+  margin: 12px 0px 5px 0px;
+  input {
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+form span {
+  display: block;
 }

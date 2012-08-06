@@ -22,7 +22,13 @@
 
   %h4 Picture:  
   .well
-    = picture_for @product    
+    = picture_for @product 
+
+  %h4 Categories:
+  .well
+    %ul
+      - @product.categories.each do |category|
+        = colored_category_name_for category
 
 .controls_
   %form.form-horizontal
@@ -31,5 +37,3 @@
         = link_to "Edit Product", edit_product_path(@product), class: "btn btn-inverse"
         = link_to "Cancel", products_path, class: "btn btn-warning"
  
-
-

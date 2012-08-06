@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-20.times do |i|
-  Product.create!(description: "description-#{i}", name: "product-#{i}", on_sale: true, price: 10, qty: 5)
-end
-
+Category.create!(name: "furniture", color: "brown")
+Category.create!(name: "antiques", color: "grey")
+Category.create!(name: "technology", color: "blue")
+Category.create!(name: "books", color: "white")
+Category.create!(name: "clothing", color: "red")
