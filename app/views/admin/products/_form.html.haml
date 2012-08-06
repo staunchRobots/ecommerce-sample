@@ -1,4 +1,5 @@
-= simple_form_for @product, class: "form-horizontal" do |f|
+= simple_form_for @product, url: url, 
+class: "form-horizontal" do |f|
   = f.input :name
   = f.input :description, input_html: { rows: 4 }
   = f.label :on_sale
@@ -12,4 +13,4 @@
 
   .many_buttons
     = f.submit class: "btn btn-primary"
-    = link_to "Cancel", products_path, class: "btn btn-warning"
+    = link_to "Cancel", admin_products_path, class: "btn btn-warning"

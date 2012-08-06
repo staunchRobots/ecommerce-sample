@@ -13,8 +13,9 @@
             %h4= product.name
             %br
             %p
-              = link_to "Details", product_path(product), class: "btn btn-primary"
-              = link_to product_path(product), class: "btn btn-danger", method: :delete, confirm: "Are you sure?" do
+              = link_to "Details", admin_product_path(product), class: "btn btn-primary"
+              = link_to admin_product_path(product), class: "btn btn-danger", method: :delete, 
+              confirm: "Are you sure?" do
                 %i{ class: "icon-trash icon-white" }
                 Delete
 
@@ -22,5 +23,5 @@
   %form.form-horizontal
     %fieldset
       .form-actions
-        = link_to "Add Product", new_product_path, class: "btn btn-info"
+        = link_to "Add Product", new_admin_product_path, class: "btn btn-info"
         = link_to "Cancel", admin_path, class: "btn btn-warning"

@@ -2,8 +2,8 @@
 
 .form-part
   .well
-    = render 'form'
+    = render partial: 'form', locals: { url: admin_product_path }
 
 .form-part
   .well
-    = render 'picture_form'  
+    = render partial: 'picture_form', locals: { url: admin_product_path }

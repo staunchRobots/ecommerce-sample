@@ -1,0 +1,41 @@
+#content-wrapper {
+  background: #101114;
+  width: 100%;
+}
+
+
+.a-product {
+  position: relative;
+  overflow: hidden;
+  padding: 15px;
+  left: 40px;
+
+  .picture {
+    float: left;
+    padding: 17px;
+    border: 1px solid #242424;
+  }
+
+  .info {
+    float: left;
+    margin-left: 25px;
+  }
+
+  .desc {
+    position: relative;
+    top: 15px;
+    clear: both;
+    max-width: 350px;
+  }
+
+}
+
+.main.button, .main.button:visited { 
+  color: #fff; 
+  background-color: #d17c15; 
+  text-shadow: 0px 1px 1px; 
+}
+
+.main.button:hover {
+  background-color: #f69b2c;
+}

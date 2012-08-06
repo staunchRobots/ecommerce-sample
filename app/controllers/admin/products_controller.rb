@@ -13,7 +13,7 @@ class Admin::ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     if @product.save
-      redirect_to products_path, notice: "Product created!"
+      redirect_to admin_products_path, notice: "Product created!"
     else
       render :new
     end
@@ -32,8 +32,8 @@ class Admin::ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.update_attributes(params[:product])
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-        format.json { head :no_content }
+        format.html { redirect_to admin_product_path(@product),
+          notice: 'Product was successfully updated.' }
       else
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -46,7 +46,7 @@ class Admin::ProductsController < ApplicationController
   def destroy
     product = Product.find(params[:id])
     if product.destroy
-      redirect_to products_path, notice: "Product destroyed successfully."
+      redirect_to admin_products_path, notice: "Product destroyed successfully."
     end
   end
 

@@ -298,7 +298,7 @@ body:before {content:""; height:100%; float:left; width:0; margin-top:-32767px; 
 .button:hover {background-color: #111; color: #131820; text-decoration: none;}
 .button:active {top: 1px; }
 
-.small.button, .small.button:visited {font-size: 9px; padding: 7px 9px 4px;}
+.small.button, .small.button:visited {font-size: 9px; padding: 7px 9px 4px; width: 55px; text-align: center; }
 .large.button, .large.button:visited {font-size: 17px; padding: 10px 18px 9px;}
 
 .main.button, .main.button:visited {color: $main_button_text_color; background-color: $main_button_bg_color; text-shadow: 0px 1px 1px; }

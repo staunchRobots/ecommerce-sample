@@ -1,2 +1,21 @@
-%h1 Products#show
-%p Find me in app/views/products/show.html.haml
+.a-product
+
+  .picture
+    = picture_for @product
+
+  .info
+    %h2
+      %strong= @product.name
+    %br
+    %h3
+      Price:
+      %span= number_to_currency @product.price
+    %p 
+      Available:
+      %span= @product.on_sale_text
+
+    = link_to "Add to Cart", nil, class: "large button main"
+
+  .desc
+    %h2 Description:
+    %p= @product.description

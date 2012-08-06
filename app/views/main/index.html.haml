@@ -3,10 +3,10 @@
     -#this will be moved to a presenter soon :)
     %ul.featured-product
       %li
-        = picture_for product
+        = link_to(picture_for(product), product_path(product) )
         %span.product-name= product.name
         %span.featured-price
           %strong= number_to_currency(product.price)
         %br
-        %span{ class: "small button details" } DETAILS
+        = link_to "DETAILS", product_path(product), class: "small button details"
 
