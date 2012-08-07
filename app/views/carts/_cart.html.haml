@@ -1,0 +1,19 @@
+#cart-container
+  #shopping-title
+    %strong
+      Shopping Cart
+    %span.price
+      Price
+
+  #line-items
+    = render cart.line_items
+
+  .bottom-line
+ 
+  .destroy-it
+    = link_to "Clear Cart", cart_path(cart), method: :delete, 
+    confirm: "Are you sure you wish to clear your current cart?"
+ 
+  .total
+    Total:  
+    = number_to_currency cart.total_price  

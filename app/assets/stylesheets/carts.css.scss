@@ -1,0 +1,39 @@
+#cart-container {
+  padding: 30px;
+  overflow: hidden;
+
+
+  #shopping-title {
+    margin-bottom: 16px;
+    font-size: 220%;
+    border-bottom: 1px solid #424242;
+
+    .price {
+      float: right;
+      font-size: 65%;
+      margin-right: 30px;
+    }
+  }
+
+  .bottom-line {
+    border-bottom: 1px solid #424242
+  }
+
+  .total {
+    margin-top: 4px;
+    margin-right: 5px;
+    float: right;
+    font-weight: bold;
+    font-size: 105%;
+  }
+
+  .destroy-it {
+    float: left;
+    margin-top: 7px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 114%;
+  }
+
+}
+

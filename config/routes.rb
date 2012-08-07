@@ -8,4 +8,7 @@ Ecommerceapp::Application.routes.draw do
     resources :products, as: "admin_products"
   end
 
+  resources :line_items, only: [ :create, :destroy ]
+  resources :carts, only: [ :show, :destroy ]
+
 end

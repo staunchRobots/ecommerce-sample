@@ -76,7 +76,7 @@ module Ecommerceapp
     end
 
     config.assets.precompile += ['stylesheet.css', 'admin.css', 'bootstrap_and_overrides.css', 'products.css',
-                                'main.css', 'display_product.css' ]
+                                'main.css', 'display_product.css', 'carts.css', 'line_items.css' ]
 
   end
 end

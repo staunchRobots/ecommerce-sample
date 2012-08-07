@@ -1,0 +1,47 @@
+.line-item {
+  clear: both;
+  margin: 10px;
+  overflow: hidden;
+  padding: 7px;
+
+  .line-item-picture {
+    float: left;
+    padding: 17px;
+    border: 1px solid #242424;
+  }
+
+  .line-item-content {
+    float: left;
+    margin-left: 20px;
+    a {
+      font-size: 145%;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .stock {
+      color: #00ff00;
+      margin-bottom: 5px;
+    }
+
+    .quantity {
+      margin-bottom: 5px;
+    }
+
+    .del a {
+      color: #008ae6;
+      font-size: 95%;
+    }
+
+  }
+
+  .line-item-offer {
+    //border: 1px solid yellow;
+    float: right;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 110%;
+    color: #e60000;
+  }
+
+}

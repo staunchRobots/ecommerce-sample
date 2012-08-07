@@ -6,6 +6,8 @@
     = stylesheet_link_tag "stylesheet", media: "all"
     = stylesheet_link_tag "main", media: "all"
     = stylesheet_link_tag "display_product", media: "all"
+    = stylesheet_link_tag "carts", media: "all"
+    = stylesheet_link_tag "line_items", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
 
@@ -22,17 +24,18 @@
         #header.clearfix
           #logo       
             %h1
-              = link_to "jestrella", home_url
-          #toolbar      
-            %ul.toolbar-checkout
-              %li
-                = link_to "Check Out", nil, class: "large button secondary"
-            %ul.toolbar-cart
-              %li
-                Cart: 
-                %span.toolbar-cart-count
-                  %a{ href: "/cart" } 0 items
-              %li                
+              = link_to "The Store", home_url
+          - if user_signed_in?
+            #toolbar      
+              %ul.toolbar-checkout
+                %li
+                  = link_to "Check Out", nil, class: "large button secondary"
+              %ul.toolbar-cart
+                %li
+                  Cart: 
+                  %span.toolbar-cart-count
+                    = link_to "#{current_cart.total_items} items", cart_path(current_cart)            
+                %li                
           #main-navigation
             %ul        
               %li.current
@@ -52,7 +55,6 @@
             = form_tag "/search" do
               = text_field_tag :q, nil, class: "search-field"
               = link_to(image_tag("btn-search.png", class: "search-button"), "/search")
-
           %br
           = yield
     
