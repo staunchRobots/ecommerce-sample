@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  
+  before_filter :authenticate_user!
   layout 'products'
 
   def show

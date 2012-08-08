@@ -42,6 +42,7 @@ gem 'coffee-rails', '~> 3.2.1'
 
 #forms
 gem 'simple_form'
+gem 'country_select'
 
 #image uploading
 gem 'carrierwave'

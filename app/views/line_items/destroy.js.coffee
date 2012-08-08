@@ -7,3 +7,5 @@ $("span.toolbar-cart-count > a").text("#{remaining} items")
 new_total = "<%= number_to_currency(@line_item.cart.total_price) %>"
 $(".total").text("Total: #{new_total}")
 
+$(".notice").hide()
+

@@ -59,6 +59,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    country_select (1.0.1)
     database_cleaner (0.8.0)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
@@ -224,6 +225,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass
   compass-rails
+  country_select
   database_cleaner
   devise
   factory_girl_rails
