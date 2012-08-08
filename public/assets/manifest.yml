@@ -8,6 +8,7 @@ br.png: br-a70c03c2de3a30e30e191e57b7309fe4.png
 breadcrumb-arrow.png: breadcrumb-arrow-5e8aa1ee6d35eab564b107d704e178a6.png
 btn-search.png: btn-search-7381b6c9f3535cd34a859154a58ee506.png
 bubble-purple_medium.jpg: bubble-purple_medium-a894b1b96b10afec723c8e841c063e3e.jpg
+default_avatar.jpg: default_avatar-02023f23f1c82baa2b0b3b6ba48dc823.jpg
 dotted-divider.gif: dotted-divider-ac1465f709986fccf9671a77723e714d.gif
 dotted-divider.png: dotted-divider-6f701dfcd3e42f958db2c4f2428cb378.png
 fancy_close.png: fancy_close-3d601fd2d9c4df3894a377f7d6d91f2a.png
@@ -79,7 +80,7 @@ carts.css: carts-46e60560304a5b5e749583dfd15590df.css
 datepicker.css: datepicker-b34ccc18c93705e1d5163c5cef7ce062.css
 display_product.css: display_product-46f84fe3c27c493c8efd5db3718f71e2.css
 line_items.css: line_items-05a406edab92c46190416f434b51a767.css
-main.css: main-171f25ac91c3e3988f47c361a3fb04d3.css
+main.css: main-5d3fe91fee6665f2e6ca58f1d1a600ef.css
 products.css: products-18ada54a1e4d21bb22dab25076623808.css
 stylesheet.css: stylesheet-694f3a10ecbedccb256b8f1e33951268.css
 fontawesome-webfont.eot: fontawesome-webfont-7cf1b0de49e2f8672c9ad6d9e382115f.eot
