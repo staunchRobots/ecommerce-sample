@@ -38,6 +38,7 @@ end
 
 #deployment
 gem 'heroku'
+gem 'coffee-rails', '~> 3.2.1'
 
 #forms
 gem 'simple_form'
