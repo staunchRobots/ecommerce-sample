@@ -1,3 +1,7 @@
+body {
+  background: white url(asset-path("body-bg.jpg", image));
+}
+
 #products-container {
   height: auto;
   width: 720px;
@@ -11,7 +15,6 @@
   height: 25px;
   top: 40px;
   left: 0px;
-  //display: none;
   text-align: center;
   background: #b1f7ce;
   color: #000;
@@ -56,11 +59,42 @@
       width: 270px;
       margin: 0 auto;
     }
-
 }
 
 
-form input[type=submit] {
-  width: 90px;
-  height: 30px;
+form {
+  input[type=submit] {
+    width: 90px;
+    height: 30px;
+  }
+
+  label {
+    color: #fff;
+  }
+
 }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+.help-block, .happiness {
+  color: #bdbdbd;
+}
+
+.linked {
+  color: #33bbff;
+
+  &:hover {
+    color: #05acff;
+  }
+
+}
+
+#user-commands {
+  color: #fff;
+  a {
+    color: #fe472f; 
+  }
+}
+

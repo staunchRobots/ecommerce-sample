@@ -9,8 +9,9 @@
     = f.input :password_confirmation, required: true
     = f.input :first_name, required: true
     = f.input :last_name, required: true
-    -#= f.input :birthday, required: true
-    -# %input { type="text" class="span2" value="02-16-2012" id="dp1">
+    = f.label :birthday
+    %input{ type: "text", class: "span2", value: "01-01-1990", id:"dp1", 
+    name: "user[birthday]" }
     = f.input :country, required: true
     = f.button :submit, "Sign up", class: "btn btn-primary"
 

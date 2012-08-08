@@ -1,2 +1,2 @@
 jQuery ->
-  $('.datepicker').datepicker()
+  $('#dp1').datepicker()
