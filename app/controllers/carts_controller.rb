@@ -16,8 +16,9 @@ class CartsController < ApplicationController
   end
 
   def destroy
-    cart = Cart.find(params[:id])
+    cart = Cart.find_by_id_and_user_id(params[:id], current_user.id)
     if cart.destroy
+      current_user.reload
       flash[:alert] = "You have successfully cleared your cart."
       redirect_to home_url
     else

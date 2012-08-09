@@ -13,11 +13,18 @@ class User < ActiveRecord::Base
 
   has_many :assignments
   has_many :roles, through: :assignments
+  has_one :cart, dependent: :destroy
 
   mount_uploader :avatar, AvatarUploader
 
   def admin?
     self.roles.map(&:name).include? "admin"
+  end
+
+  def current_cart
+    cart = Cart.where(user_id: self).first
+    cart = self.create_cart if cart.nil?
+    cart
   end
 
 end

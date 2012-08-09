@@ -31,19 +31,12 @@
                 %li
                   Cart: 
                   %span.toolbar-cart-count
-                    = link_to "#{current_cart.total_items} items", cart_path(current_cart)
-                %li 
-          #main-navigation
-            %ul        
-              %li.current
-                = link_to "Home", home_url
-              %li
-                = link_to "Catalog", nil
-              %li
-                = link_to "Blog", nil
-              %li
-                = link_to "About Us", nil
+                    = link_to "#{current_user.current_cart.total_items} items", 
+                    cart_path(current_user.current_cart)
+                %li
 
+          = yield :main_navigation
+         
         %div{ style: "clear: both" }
               
       = render 'shared/home_banner' 

@@ -1,0 +1,7 @@
+- content_for :main_navigation do
+  #main-navigation
+    %ul
+      = nav_tab 'Home', home_url, current: current_tab
+      = nav_tab 'Catalog', catalog_path, current: current_tab
+      = nav_tab 'Products', products_path, current: current_tab
+
