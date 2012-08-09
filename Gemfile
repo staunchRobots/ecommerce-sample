@@ -48,3 +48,6 @@ gem 'country_select'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
+
+#full-text search
+gem 'pg_search'

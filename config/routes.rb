@@ -11,4 +11,6 @@ Ecommerceapp::Application.routes.draw do
   resources :line_items, only: [ :create, :destroy ]
   resources :carts, only: [ :show, :destroy ]
 
+  get "search" => "search#query", as: "search"
+
 end

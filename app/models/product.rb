@@ -7,10 +7,22 @@ class Product < ActiveRecord::Base
   has_many :categorizations
   has_many :categories, through: :categorizations
 
+  include PgSearch
+  pg_search_scope :search, against: [ :name, :description ],
+    using: { tsearch: { dictionary: "english"} }
+
   def on_sale_text
     value = (self.on_sale == true) ? "Yes" : "No"
   end
 
   mount_uploader :picture, PictureUploader
+
+  def self.text_search(query)
+    if query.present?
+      search(query)
+    else
+      scoped
+    end
+  end
 
 end

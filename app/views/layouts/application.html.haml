@@ -50,10 +50,7 @@
 
       #content-wrapper
         #featured-products
-          #search
-            = form_tag "/search" do
-              = text_field_tag :q, nil, class: "search-field"
-              = link_to(image_tag("btn-search.png", class: "search-button"), "/search")
+          = render "shared/search"         
           %h3.featured-products-title Featured Products:
 
           = yield
