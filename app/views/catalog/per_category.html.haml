@@ -1,0 +1,11 @@
+#products-container
+  %h2
+    %strong= @title.capitalize
+  %br
+  - if @products.empty?
+    %h4 No products available for this Category, sorry. 
+  = render @products
+
+  = will_paginate @products
+
+= currently_at "Catalog"

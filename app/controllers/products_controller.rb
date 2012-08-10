@@ -1,9 +1,9 @@
 class ProductsController < ApplicationController
-
+  before_filter :authenticate_user!
   layout 'products'
 
   def index
-    @products = Product.limit(9).order("created_at DESC")
+    @products = Product.available.paginate(page: params[:page]).order("created_at DESC")
   end
 
   def show

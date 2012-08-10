@@ -4,5 +4,10 @@
 %br
 
 #products-container
+  -if @products.empty?
+    %h4 No products were found, sorry.
+
   = render @products
+
+= currently_at "Products"
   

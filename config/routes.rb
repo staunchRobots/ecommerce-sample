@@ -11,6 +11,11 @@ Ecommerceapp::Application.routes.draw do
   resources :line_items, only: [ :create, :destroy ]
   resources :carts, only: [ :show, :destroy ]
   get "catalog" => "catalog#show", as: "catalog"
+
+  scope "/catalog" do
+    get "per_category" => "catalog#per_category", as: "per_category"
+  end
+
   get "search" => "search#query", as: "search"
 
 end

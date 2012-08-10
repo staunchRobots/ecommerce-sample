@@ -51,3 +51,9 @@ gem 'fog'
 
 #full-text search
 gem 'pg_search'
+
+#descriptive ids
+gem 'friendly_id'
+
+#pagination
+gem 'will_paginate'

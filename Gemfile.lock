@@ -88,6 +88,7 @@ GEM
       nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.3)
+    friendly_id (4.0.7)
     fssm (0.2.9)
     haml (3.1.6)
     haml-rails (0.3.4)
@@ -215,6 +216,7 @@ GEM
       multi_json (~> 1.3)
     warden (1.2.1)
       rack (>= 1.0)
+    will_paginate (3.0.3)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -233,6 +235,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   fog
+  friendly_id
   haml
   haml-rails
   heroku
@@ -248,3 +251,4 @@ DEPENDENCIES
   therubyracer
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
+  will_paginate

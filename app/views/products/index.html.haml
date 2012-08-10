@@ -1,4 +1,7 @@
 #products-container
   = render @products
 
+  .pagination
+    = will_paginate @products
+
 = currently_at "Products"

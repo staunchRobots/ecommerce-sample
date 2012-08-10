@@ -1,8 +1,9 @@
-%ul.featured-product
-  %li
-    = link_to(picture_for(product), product_path(product) )
-    %span.product-name= product.name
-    %span.featured-price
-      %strong= number_to_currency(product.price)
-    %br
-    = link_to "DETAILS", product_path(product), class: "small button details"
+- if product.in_stock?
+  %ul.featured-product
+    %li
+      = link_to(picture_for(product), product_path(product) )
+      %span.product-name= product.name
+      %span.featured-price
+        %strong= number_to_currency(product.price)
+      %br
+      = link_to "DETAILS", product_path(product), class: "small button details"

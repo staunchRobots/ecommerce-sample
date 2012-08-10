@@ -7,6 +7,18 @@ body {
   width: 720px;
   margin: 0 auto;
   overflow: hidden;
+
+  h4 {
+    font-style: italic;
+  }  
+
+}
+
+.pagination {
+  float: left;
+  clear: both;
+  top: 15px;
+  margin: 12px 0px 0px 5px;
 }
 
 .notice, .alert {
@@ -111,5 +123,13 @@ h1, h2, h3, h4, h5, h6 {
 .search-title {
   margin-left: 12%;
   float: left;
+}
+
+#categories {
+  padding: 20px;
+
+  a {
+    font-size: 150%;
+  }
 }
 

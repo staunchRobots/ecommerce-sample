@@ -3,7 +3,7 @@ class Admin::ProductsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @products = Product.limit(6).order("created_at DESC")
+    @products = Product.paginate(page: params[:page]).order("created_at DESC")
   end
 
   def new
@@ -41,7 +41,6 @@ class Admin::ProductsController < ApplicationController
     end
 
   end
-
 
   def destroy
     product = Product.find(params[:id])

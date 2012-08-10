@@ -1,4 +1,9 @@
-%h1 Catalog#show
+#categories
+  %h2 Product Categories
+  %br
+  - Category.all.each do |category|
+    = link_to category.name, per_category_path(id: category, name: category.name)
+    %br
 
 = currently_at "Catalog"
 
