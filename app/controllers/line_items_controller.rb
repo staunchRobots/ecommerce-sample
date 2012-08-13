@@ -1,20 +1,21 @@
 class LineItemsController < ApplicationController
 
   def create
-    @cart = current_user.current_cart
+    cart = current_user.current_cart
     product = Product.find(params[:product_id])
-    @line_item = @cart.add_product(product.id)
-
-    respond_to do |format|      
-      if @line_item.save
+    @line_item = cart.add_product(product.id)
+     
+    if @line_item.save
+      @line_item.deliver_notification(current_user)
+      respond_to do |format| 
         format.html { redirect_to @line_item.cart, 
           notice: "You have added an item to your Cart" }
-      else
-        flash[:error] = "Your product could not be added"
-        format.html { redirect_to home_url  }
       end
+    else
+      flash[:error] = "Your product could not be added"
+      respond_with(@line_item.cart)
     end
-
+    
   end
 
   def destroy

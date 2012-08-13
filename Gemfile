@@ -57,3 +57,4 @@ gem 'friendly_id'
 
 #pagination
 gem 'will_paginate'
+
