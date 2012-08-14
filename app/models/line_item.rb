@@ -7,8 +7,8 @@ class LineItem < ActiveRecord::Base
     product.price * quantity
   end
 
-  def deliver_notification(user)
-    AddItemToCartNotifier.notification(user, self.product.name).deliver
+  def self.deliver_notification(user_name, user_email, product_name)
+    AddItemToCartNotifier.notification(user_name, user_email, product_name).deliver
   end
 
 end

@@ -6,7 +6,8 @@ class LineItemsController < ApplicationController
     @line_item = cart.add_product(product.id)
      
     if @line_item.save
-      @line_item.deliver_notification(current_user)
+      LineItem.deliver_notification(current_user.first_name, current_user.email, 
+        @line_item.product.name)
       respond_to do |format| 
         format.html { redirect_to @line_item.cart, 
           notice: "You have added an item to your Cart" }
