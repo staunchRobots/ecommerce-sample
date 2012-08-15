@@ -36,4 +36,9 @@ class Product < ActiveRecord::Base
     end
   end
 
+  def self.deliver_notification(user_name, user_email, product_name)
+    PriceChangeNotifier.notification(user_name, user_email, product_name)
+      .deliver
+  end
+
 end

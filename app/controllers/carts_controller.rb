@@ -4,12 +4,12 @@ class CartsController < ApplicationController
 
   def show
     begin
-      @cart = Cart.find(params[:id])
+      @cart = current_user.current_cart
     rescue
       redirect_to home_url, notice: 'Invalid cart'
     else
       respond_to do |format|
-        format.html
+        format.html { }
         format.json { render json: @cart }
       end
     end
