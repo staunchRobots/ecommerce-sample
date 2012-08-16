@@ -1,0 +1,11 @@
+%h2 Edit user
+%br
+= simple_form_for @user, url: admin_user_path,
+class: "form-horizontal" do |f|
+  %h4 Assign admin privileges
+  .well
+    = f.collection_check_boxes :role_ids, Role.all, :id, :name
+
+  .many_buttons
+    = f.submit class: "btn btn-primary"
+    = link_to "Cancel", admin_users_path, class: "btn btn-warning"

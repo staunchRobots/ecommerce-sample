@@ -1,0 +1,5 @@
+%h2 Registered Users
+
+- @users.each do |user|
+  = link_to user.first_name, admin_user_path(user)
+  %br

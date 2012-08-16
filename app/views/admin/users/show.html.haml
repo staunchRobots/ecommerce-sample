@@ -1,0 +1,26 @@
+.one-user
+  %h2= @user.first_name
+
+  %h4 e-mail:
+  .well
+    %h6= @user.email
+
+  %h4 country
+  .well
+    %h6= @user.country
+
+  %h4 picture
+  .well
+    = avatar_for @user
+
+.controls_
+  %form.form-horizontal
+    %fieldset
+      .form-actions
+        = link_to "Edit User", edit_admin_user_path(@user), class: "btn btn-inverse"
+        = link_to "Cancel", admin_users_path, class: "btn btn-warning"
+        = link_to admin_user_path(@user), class: "btn btn-danger", method: :delete, 
+        data: { confirm: "Are you sure?" } do
+          %i{ class: "icon-trash icon-white" }
+          Delete
+

@@ -6,6 +6,7 @@ Ecommerceapp::Application.routes.draw do
 
   scope module: 'admin', path: '/admin' do
     resources :products, as: "admin_products"
+    resources :users, as: "admin_users"
   end
 
   resources :line_items, only: [ :create, :destroy ]
