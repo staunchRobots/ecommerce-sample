@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Category do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  let(:category) { FactoryGirl.create(:category) }
+
+  it "is valid with basic fields" do
+    category.should be_valid  
+  end
 end
