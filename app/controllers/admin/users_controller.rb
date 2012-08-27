@@ -6,7 +6,8 @@ class Admin::UsersController < ApplicationController
     @users = User.all
   end
 
-  def show
+  def show      
+    # extract to method call
     @user = User.find(params[:id])
   end
 
@@ -21,7 +22,8 @@ class Admin::UsersController < ApplicationController
         format.html { redirect_to admin_user_path(@user),
           notice: 'User was successfully updated.' }
       else
-        format.html { render :edit }
+        format.html { render :edit }    
+        # JSON?
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -29,6 +31,7 @@ class Admin::UsersController < ApplicationController
 
   def destroy
     user = User.find(params[:id])
+    # See admin/products_controller#delete
     if user.destroy
       redirect_to admin_users_path, notice: "User destroyed successfully."
     end 

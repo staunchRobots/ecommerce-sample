@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :assignment do
+    # use associations instead of predefined data
     user_id 1
     role_id 1
   end

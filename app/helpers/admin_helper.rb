@@ -2,12 +2,13 @@ module AdminHelper
 
   def select_alert_type(name, message)
     if !!(/^Place.*/ =~ message)
-      return 'info'
+      # No need of 'return' at all
+      'info'
     elsif name == :notice
-      return 'success'
+      'success'
     else
-      return 'error'
-    end 
+      'error'
+    end
   end
 
 end

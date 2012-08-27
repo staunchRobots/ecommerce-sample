@@ -16,6 +16,7 @@ describe Cart do
 
   context "when a product it's there" do
     context "when I add the same product" do
+      # Before each for 1 method? 
       before(:each) { cart.line_items = [ line_item ] }      
       it "does not create a new item" do
         expect { cart.add_product(line_item.product_id) }.to change { LineItem.count }.by(0)

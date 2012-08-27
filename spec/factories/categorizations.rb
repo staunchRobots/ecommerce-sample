@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :categorization do
+    # use associations
     product_id 1
     category_id 1
   end

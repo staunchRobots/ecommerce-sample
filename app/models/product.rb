@@ -18,6 +18,7 @@ class Product < ActiveRecord::Base
   pg_search_scope :search, against: [ :name, :description ],
     using: { tsearch: { dictionary: "english"} }
 
+  # Text is belongs to helper more
   def on_sale_text
     value = self.on_sale ? "Yes" : "No"
   end
@@ -35,7 +36,8 @@ class Product < ActiveRecord::Base
       scoped
     end
   end
-
+                               
+  # move to observer or mailer directly
   def self.deliver_notification(user_name, user_email, product_name)
     PriceChangeNotifier.notification(user_name, user_email, product_name)
       .deliver

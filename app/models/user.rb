@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, 
+  attr_accessible :email, :password, :password_confirmation, :remember_me,
   :first_name, :last_name, :birthday, :country, :avatar, :role_ids
 
   validates_presence_of :first_name, :last_name, :country
@@ -23,8 +23,7 @@ class User < ActiveRecord::Base
 
   def current_cart
     cart = Cart.where(user_id: self).first
-    cart = self.create_cart if cart.nil?
-    cart
+    cart ||= self.create_cart
   end
 
 end

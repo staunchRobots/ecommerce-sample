@@ -13,10 +13,14 @@ class Cart < ActiveRecord::Base
   end
 
   def total_price
+    # line_items.to_a.sum(&total_price)
+    # Much cleaner
     line_items.to_a.sum { |item| item.total_price }
   end
 
   def total_items
+    # Don't use inject please
+    # line_items.map(&:quantity).sum
     line_items.map(&:quantity).inject(0) { |total, x| total + x }
   end
 

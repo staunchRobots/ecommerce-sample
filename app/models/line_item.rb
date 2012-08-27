@@ -7,6 +7,7 @@ class LineItem < ActiveRecord::Base
     product.price * quantity
   end
 
+  # Move to observer! or to mailer directly
   def self.deliver_notification(user_name, user_email, product_name)
     AddItemToCartNotifier.notification(user_name, user_email, product_name).deliver
   end

@@ -11,3 +11,6 @@ Category.create!(name: "antiques", color: "grey")
 Category.create!(name: "technology", color: "blue")
 Category.create!(name: "books", color: "white")
 Category.create!(name: "clothing", color: "red")
+
+# Products seeds?
+# Also better to wrap this calls to module or class
